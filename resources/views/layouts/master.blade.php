@@ -11,6 +11,7 @@
     <link href="{{url('assets/css/tooltipster.bundle.min.css')}}" type="text/css" rel="stylesheet">
     <link href="{{url('assets/css/tooltipster-sideTip-borderless.min.css')}}" type="text/css" rel="stylesheet">
     <link href="{{url('assets/css/theme.css')}}" type="text/css" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
 <header>
@@ -46,7 +47,8 @@
             <li>
                 <a href="#"><img src="{{url('assets/images/text.png')}}">Tạo văn bản</a>
             </li>
-            <li><a href="#"><img src="{{url('assets/images/download.png')}}">Download video</a></li>
+            <li class="@if($active == 'video'){{'active'}}@endif"><a href="{{route('video')}}"><img src="{{url('assets/images/download.png')}}">Download video</a></li>
+            <li class="@if($active == 'uid'){{'active'}}@endif"><a href="{{route('uid')}}"><img src="{{url('assets/images/uid.png')}}">Lấy ID Facebook</a></li>
             <li class="@if($active == 'qr-code'){{'active'}}@endif">
                 <a href="{{route('qr-code')}}"><img src="{{url('assets/images/qr-code.png')}}">Tạo QR code</a>
             </li>

@@ -138,4 +138,43 @@ class SiteService
             return '';
         }
     }
+
+    public function getUid($inputs)
+    {
+        try {
+            $url = $inputs['url'];
+            return $this->getUserIDFromUsername($this->getUsernameFromFacebookURL($inputs['url']));
+        } catch (\Exception $e) {
+            return NULL;
+        }
+    }
+
+    public function getUserIDFromUsername($username) {
+        // For some reason, changing the user agent does expose the user's UID
+        $options  = array('http' => array('user_agent' => 'some_obscure_browser'));
+        $context  = stream_context_create($options);
+        $fbsite = file_get_contents('https://www.facebook.com/' . $username, false, $context);
+
+        // ID is exposed in some piece of JS code, so we'll just extract it
+        $fbIDPattern = '/\"entity_id\":\"(\d+)\"/';
+        if (!preg_match($fbIDPattern, $fbsite, $matches)) {
+            throw new Exception('Unofficial API is broken or user not found');
+        }
+        return $matches[1];
+    }
+
+    public function getUsernameFromFacebookURL($url) {
+        /**
+         * Taken from http://findmyfbid.com/, the valid formats are:
+         * https://www.facebook.com/JohnDoe
+         * https://m.facebook.com/sally.struthers
+         * https://www.facebook.com/profile.php?id=24353623
+         */
+        $correctURLPattern = '/^https?:\/\/(?:www|m)\.facebook.com\/(?:profile\.php\?id=)?([a-zA-Z0-9\.]+)$/';
+        if (!preg_match($correctURLPattern, $url, $matches)) {
+            throw new Exception('Not a valid URL');
+        }
+
+        return $matches[1];
+    }
 }
