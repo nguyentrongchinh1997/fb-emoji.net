@@ -112,6 +112,11 @@ class SiteController extends Controller
 
     public function getUid(Request $request)
     {
+        $this->validate($request,
+            [
+                'url' => 'required'
+            ]
+        );
         $result = $this->_siteService->getUid($request->all());
 
         return view('pages.uid', [

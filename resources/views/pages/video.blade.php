@@ -31,22 +31,27 @@
 @section('js')
     <script type="text/javascript">
         $('.download').click(function(){
-            $('#loading').attr('src', "assets/images/200.gif");
             url = $('.url').val();
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $.ajax({
-               type:'POST',
-               url:"{{route('convert_video')}}",
-               data:{url:url},
-               success:function(data){
-                    $('.video').html(data);
-                    $('#loading').attr('src', "");
-               }
-            });
+            
+            if (url != '') {
+                $('#loading').attr('src', "assets/images/200.gif");
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                   type:'POST',
+                   url:"{{route('convert_video')}}",
+                   data:{url:url},
+                   success:function(data){
+                        $('.video').html(data);
+                        $('#loading').attr('src', "");
+                   }
+                });
+            } else {
+                alert('Cần nhập link video');
+            }
         })
     </script>
 @endsection
