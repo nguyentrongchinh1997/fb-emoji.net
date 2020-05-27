@@ -47,7 +47,7 @@
                 <ul>
                     <li>
                         <a href="{{route('line-through')}}">
-                            <img src="{{url('assets/images/underline.png')}}"> Gạch chân
+                            <img src="{{url('assets/images/underline.png')}}"> Gạch ngang
                         </a>
                     </li>
                     <li>

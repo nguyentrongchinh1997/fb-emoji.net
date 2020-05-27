@@ -5,28 +5,18 @@
 @section('content')
     <div class="main-content">
         <h2>Tạo chữ in nghiêng trên facebook nhanh nhất</h2>
-        <p>Bạn muốn tạo chữ gạch ngang để đăng trên status Facebook hay Yahoo hiệu quả nhất?</p>
-        <p>Không khó khăn, công cụ dưới đây sẽ giúp bạn tạo các chữ dạng gạch ngang, xóa bỏ trên Facebook, Yahoo mà
-            không cần dùng app hay phần mềm nào.</p>
-        <p>Cách làm và nguyên tắc</p>
-        <ul>
-            <li><b>Bước 1:</b> Bạn gõ chữ muốn tạo gạch ngang vào ô thư nhất. Cương trình sẽ tự sinh ra chữ gạch ngang
-                tương
-                ứng trong ô thứ hai cho bạn.
-            </li>
-            <li><b>Bước 2:</b> Bạn copy chữ đã gạch ngang trong ô thứ hai, và paste vào status Facebook, Chat Yahoo và
-                đăng.
-            </li>
-        </ul>
-        <p>Đây là công cụ làm chữ gạch ngang. Các bạn làm theo hước dẫn để có chữ gạch ngang nhé (Hỗ trợ mọi kiểu chữ:
-            Viết thường, viết hoa, số, tiếng Việt)</p>
-        <p><b>Gõ chữ muốn xiên chéo làm Status Facebook/Yahoo:</b></p>
+        <p>
+            Công cụ này giúp tạo ra các văn bản in nghiêng nhờ sử dụng ký tự unicode. Văn bản do công cụ này tạo ra có thể tương tự với văn bản được tạo ra nhờ thẻ HTML nhưng trên thực tế không phải.
+        </p>
+        <p>
+            Bạn có thể sao chép và dán văn bản vào email hoặc dùng khi muốn cập nhật trạng thái trên trang Facebook và Twitter, bình luận trên YouTube, vân vân. Phông chữ in nghiêng thường được sử dụng để nhấn mạnh một quan điểm. Chữ in nghiêng cũng có thể được sử dụng để sắp xếp cấu trúc các đoạn văn lớn, ví dụ để đánh dấu chủ đề, đầu bài hoặc tiêu đề.
+        </p>
+        <p><b>Gõ chữ muốn in nghiêng làm Status Facebook/Yahoo:</b></p>
         <textarea rows="5" class="text-input"></textarea>
-        <p>Nội dung trên được biến thành <i>chữ in nghiêng</i> ô dưới
-            đây</p>
+        <p><b>Kết quả:</b></p>
         <textarea rows="5" class="text-output"></textarea>
         <button class="btn btn-primary btn-copy tooltip" title="Copied!">Copy</button>
-        <p>Hãy copy chữ gạch ngang này và paste vào hộp status đăng lên FaceBook hoặc chat Yahoo</p>
+        <p>Hãy copy chữ in nghiêng này và paste vào hộp status đăng lên FaceBook hoặc chat Yahoo</p>
     </div>
 @endsection
 

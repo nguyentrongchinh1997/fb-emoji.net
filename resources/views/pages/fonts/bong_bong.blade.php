@@ -5,28 +5,19 @@
 @section('content')
     <div class="main-content">
         <h2>Tạo chữ bong bóng trên facebook nhanh nhất</h2>
-        <p>Bạn muốn tạo chữ gạch ngang để đăng trên status Facebook hay Yahoo hiệu quả nhất?</p>
-        <p>Không khó khăn, công cụ dưới đây sẽ giúp bạn tạo các chữ dạng gạch ngang, xóa bỏ trên Facebook, Yahoo mà
-            không cần dùng app hay phần mềm nào.</p>
-        <p>Cách làm và nguyên tắc</p>
-        <ul>
-            <li><b>Bước 1:</b> Bạn gõ chữ muốn tạo gạch ngang vào ô thư nhất. Cương trình sẽ tự sinh ra chữ gạch ngang
-                tương
-                ứng trong ô thứ hai cho bạn.
-            </li>
-            <li><b>Bước 2:</b> Bạn copy chữ đã gạch ngang trong ô thứ hai, và paste vào status Facebook, Chat Yahoo và
-                đăng.
-            </li>
-        </ul>
-        <p>Đây là công cụ làm chữ gạch ngang. Các bạn làm theo hước dẫn để có chữ gạch ngang nhé (Hỗ trợ mọi kiểu chữ:
-            Viết thường, viết hoa, số, tiếng Việt)</p>
-        <p><b>Gõ chữ muốn xiên chéo làm Status Facebook/Yahoo:</b></p>
+        <p>
+            Công cụ này tạo các vòng tròn hoặc bong bóng có chứa ký tự văn bản với nền trắng. Các ký tự bong bóng này có thể được dùng khi cập nhật trạng thái trên Facebook hoặc Twitter, trong email và bất kỳ nơi nào khác. Bạn có thể sử dụng chữ bong bóng để thể hiện sự hào hứng, sự chúc mừng hoặc nhấn mạnh điều quan trọng.
+        </p>
+        <p>
+            <b>Gõ chữ muốn tạo bong bóng làm Status Facebook/Yahoo:</b>
+        </p>
         <textarea rows="5" class="text-input"></textarea>
-        <p>Nội dung trên được biến thành ⓒⓗữ ⓑⓞⓝⓖ ⓑóⓝⓖ ô dưới
-            đây</p>
+        <p>
+            <b>Kết quả:</b>
+        </p>
         <textarea rows="5" class="text-output"></textarea>
         <button class="btn btn-primary btn-copy tooltip" title="Copied!">Copy</button>
-        <p>Hãy copy chữ bong bóng này và paste vào hộp status đăng lên FaceBook hoặc chat Yahoo</p>
+        <p>Hãy copy và paste vào hộp status đăng lên FaceBook hoặc chat Yahoo</p>
     </div>
 @endsection
 
