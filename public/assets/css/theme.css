@@ -551,8 +551,8 @@ footer .footer-wrapper button.btn-copy {
     width: 100%;
 }
 .left-sidebar>ul>li ul>li{
+    padding-left:  0px !important;
     border-radius: 0px !important;
-    padding: 8px 15px;
 }
 .menu-active{
     display: block;

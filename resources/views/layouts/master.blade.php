@@ -47,43 +47,40 @@
                 <ul>
                     <li>
                         <a href="{{route('line-through')}}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Gạch chân
+                            <img src="{{url('assets/images/underline.png')}}"> Gạch chân
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('xien-cheo') }}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Xiên chéo
+                            <img src="{{url('assets/images/close.png')}}"> Xiên chéo
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('viet-tay') }}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ viết tay
+                            <img src="{{url('assets/images/draw.png')}}"> Chữ viết tay
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('in-dam') }}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ in đậm
+                            <img src="{{url('assets/images/bold.png')}}"> Chữ in đậm
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('in-nghieng') }}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ in nghiêng
+                            <img src="{{url('assets/images/italic.png')}}"> Chữ in nghiêng
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('bong-bong') }}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ bong bóng
+                            <img src="{{url('assets/images/tourism.png')}}"> Chữ bong bóng
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('vuong') }}">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ vuông
+                            <img src="{{url('assets/images/cube.png')}}"> Chữ vuông
                         </a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="#"><img src="{{url('assets/images/text.png')}}">Tạo văn bản</a>
             </li>
             <li class="@if($active == 'video'){{'active'}}@endif"><a href="{{route('video')}}"><img src="{{url('assets/images/download.png')}}">Download video</a></li>
             <li class="@if($active == 'uid'){{'active'}}@endif"><a href="{{route('uid')}}"><img src="{{url('assets/images/uid.png')}}">Lấy ID Facebook</a></li>
