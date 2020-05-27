@@ -173,6 +173,7 @@ header .header-wrapper .nav-menu-icon {
 
 .main .main-content textarea.text-output {
     background-color: #efefef;
+    font-size: 20px;
 }
 
 .main .main-content input {
@@ -263,7 +264,7 @@ header .header-wrapper .nav-menu-icon {
 .main .left-sidebar {
     box-sizing: border-box;
     padding: 15px 0;
-    flex-basis: 190px;
+    flex-basis: 240px;
     margin-right: 10px;
 }
 
@@ -540,6 +541,21 @@ footer .footer-wrapper button.btn-copy {
     border-radius: 4px;
     padding: 15px;
     cursor: pointer;
+}
+.left-sidebar>ul>li{
+    position: relative;
+}
+.left-sidebar>ul>li ul {
+    display: none;
+    margin-top: 8px !important;
+    width: 100%;
+}
+.left-sidebar>ul>li ul>li{
+    border-radius: 0px !important;
+    padding: 8px 15px;
+}
+.menu-active{
+    display: block;
 }
 @media screen and (max-width: 1200px) {
     header .header-wrapper {

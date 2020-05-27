@@ -125,6 +125,64 @@ class SiteController extends Controller
         ]);
     }
 
+    public function xienCheo()
+    {
+        return view('pages.fonts.xien_cheo', ['active' => 'line-through']);
+    }
+
+    public function vietTay()
+    {
+        return view('pages.fonts.viet_tay', ['active' => 'line-through']);
+    }
+
+    public function inDam()
+    {
+        return view('pages.fonts.in_dam', ['active' => 'line-through']);
+    }
+
+    public function inNghieng()
+    {
+        return view('pages.fonts.in_nghieng', ['active' => 'line-through']);
+    }
+
+    public function bongBong()
+    {
+        return view('pages.fonts.bong_bong', ['active' => 'line-through']);
+    }
+
+    public function vuong()
+    {
+        return view('pages.fonts.vuong', ['active' => 'line-through']);
+    }
+
+    public function convertFont(Request $request)
+    {
+        $type = $request->type;
+
+        if ($type == 0) {
+            $items = config('config.xien_cheo');
+        } else if ($type == 1) {
+            $items = config('config.viet_tay');
+        } else if ($type == 2) {
+            $items = config('config.bold');
+        } else if ($type == 3) {
+            $items = config('config.italic');
+        } else if ($type == 4) {
+            $items = config('config.bong_bong');
+        } else if ($type == 5) {
+            $items = config('config.vuong');
+        }
+        
+        $input = $request->get('input');
+
+        foreach ($items as $key => $value) {
+            $string = str_replace($key, $value, $input);
+            $input = $string;
+        }
+
+        return $string;
+    }
+
     public function get_web_page($url) {
         try {
             $options = array(

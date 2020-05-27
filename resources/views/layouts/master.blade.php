@@ -12,6 +12,7 @@
     <link href="{{url('assets/css/tooltipster-sideTip-borderless.min.css')}}" type="text/css" rel="stylesheet">
     <link href="{{url('assets/css/theme.css')}}" type="text/css" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+    {{-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> --}}
 </head>
 <body>
 <header>
@@ -39,10 +40,47 @@
                 <a href="{{route('home')}}"><img src="{{url('assets/images/smile.png')}}">
                     Facebook emoji</a>
             </li>
-            <li class="@if($active == 'line-through'){{'active'}}@endif">
-                <a href="{{route('line-through')}}"><img src="{{url('assets/images/editing.png')}}">
-                    Tạo chữ gạch chân
+            <li class="sub-menu @if($active == 'line-through'){{'active'}}@endif">
+                <a href="#"><img src="{{url('assets/images/editing.png')}}">
+                    Tạo kiểu chữ <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
+                <ul>
+                    <li>
+                        <a href="{{route('line-through')}}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Gạch chân
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('xien-cheo') }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Xiên chéo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('viet-tay') }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ viết tay
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('in-dam') }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ in đậm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('in-nghieng') }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ in nghiêng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('bong-bong') }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ bong bóng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('vuong') }}">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i> Chữ vuông
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#"><img src="{{url('assets/images/text.png')}}">Tạo văn bản</a>
@@ -68,6 +106,13 @@
 <script src="{{url('assets/js/theme.js')}}" type="text/javascript"></script>
 <script src="{{url('assets/js/jquery.min.js')}}" type="text/javascript"></script>
 <script src="{{url('assets/js/tooltipster.bundle.min.js')}}" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.sub-menu').click(function(){
+            $(this).children('ul').toggle();
+        })
+    })
+</script>
 @yield('js')
 </body>
 </html>
